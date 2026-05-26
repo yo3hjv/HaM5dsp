@@ -1,0 +1,24 @@
+# v0.32.3 (B.0.3) - Power Diagnostics & SOH System (2026-05-26)
+-------------------------------------------------------------------------------
+- [POWER] Implementation of SOH (State of Health) algorithm based on time integration (Coulomb Counting): the battery is continuously measured during discharge within safe thresholds (4.15V max, 3.30V minimum for capacity calculation, 3.15V cutoff threshold).
+- [POWER] Integration of emergency Safe-Save into NVS memory for accumulated current upon reaching the critical threshold of 3.30V, protecting data against forced interruption.
+- [POWER] Telemetry stabilization through temporal averaging (20 ADC samples accumulated over one second - 50ms), providing extremely stable voltage and current values.
+- [POWER] Update of battery percentage estimation based on a linear model strictly confined within the real usable operating window (3.15V - 4.15V).
+- [UI/UX] Architectural rewrite of the Power Diagnostics page (`pwr_page.cpp`) into a scrollable list-style Viewport, perfectly aligned visually with DevSet menus and MP3 List.
+- [UI/UX] Full hardware support integration for Power Diagnostics: unified use of `footer_manager` enabling navigation via physical buttons BtnA (`</DN>`), BtnB (`UP`), and BtnC (`EXIT`).
+- [SYSTEM] Default Battery Capacity adjusted from 1000mAh to 500mAh in GlobalConfig.
+- [SYSTEM] Automatic SOH reset (clearing `batt_measured_cap`) when the user changes the declared value `batt_def_cap` from the system settings menu.
+
+===============================================================================
+v0.32.2 - BT Audio Engine & UI Smart Refinements (2026-05-25)
+-------------------------------------------------------------------------------
+- [BT AUDIO] Implementation of exclusive BT-only mode: direct and clean boot of the MP3 engine combined with the ESP32-A2DP stack, completely bypassing missing ES8388 hardware dependencies (I2S/I2C).
+- [UI/UX] Fix of graphical artifacts in the virtual keypad when exiting the Power Diagnostics screen by implementing viewport cleanup during page transitions.
+- [UI/UX] Navigation consistency improvement: returning (BACK) from BT lists (Scan / Saved) is now handled consistently via long-press on BtnA, matching the rest of the application.
+- [UI/UX] Alignment of scroll directions in MP3 List to match the new global standard (BtnA = Down, BtnC = Up), including footer update.
+- [UI/UX] Extreme Smart Refresh optimization on the Power Diagnostics screen: battery icon redraw uses "fill + remainder" technique (no background erase), eliminating flicker completely.
+- [UI/UX] Power Header improvement: if USB is disconnected, the system dynamically displays real battery current (negative, orange) instead of frozen USB values.
+- [UI/UX] Boot with `Auto MP3 = ON` or in hardware `BT-Only` mode now directly shows the clean "MP3player" splash instead of keeping the user in the unnecessary "Choose" menu.
+- [BUGFIX] Complete removal of I2C "NACK" and `Read failed 0x33` error flood in the serial console when entering DevSet settings without the physical audio module (bridge guards `g_has_audio_module` added on `getHPMode`).
+- [BUGFIX] Fixed "UNLICENSED FEATURE" screen where the first line used incorrect font size (size 1 instead of size 2).
+- [SYSTEM] Global Debounce engine rewritten for Touch and physical buttons interaction using a stable time-based filter (40ms), eliminating false double clicks caused by strong BT RF emissions.
