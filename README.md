@@ -14,7 +14,7 @@ Simply connect it to any line-out signal from a receiver and rediscover HF bands
 - Portable, battery-powered design (with recommended module)  
 - Reusable hardware platform  
 - Instant improvement in intelligibility and operator comfort
-- Very low latency (around 16 msec.), excellent for CW fast QSO exchange
+- Very low latency (around 16 msec.), excellent for CW fast QSO exchange (~40 WPM → ~30 ms / dit)
 
 ---
 
