@@ -13,7 +13,8 @@ Simply connect it to any line-out signal from a receiver and rediscover HF bands
 - Works with virtually any receiver with mono line-level (or lower) output  
 - Portable, battery-powered design (with recommended module)  
 - Reusable hardware platform  
-- Instant improvement in intelligibility and operator comfort  
+- Instant improvement in intelligibility and operator comfort
+- Very low latency (around 16 msec.), excellent for CW fast QSO exchange
 
 ---
 
