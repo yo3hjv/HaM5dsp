@@ -1,4 +1,4 @@
-# v0.32.3 (B.0.3) - Power Diagnostics & SOH System (2026-05-26)
+# vB.0.3 - Power Diagnostics & SOH System (2026-05-26)
 -------------------------------------------------------------------------------
 - [POWER] Implementation of SOH (State of Health) algorithm based on time integration (Coulomb Counting): the battery is continuously measured during discharge within safe thresholds (4.15V max, 3.30V minimum for capacity calculation, 3.15V cutoff threshold).
 - [POWER] Integration of emergency Safe-Save into NVS memory for accumulated current upon reaching the critical threshold of 3.30V, protecting data against forced interruption.
@@ -9,7 +9,7 @@
 - [SYSTEM] Default Battery Capacity adjusted from 1000mAh to 500mAh in GlobalConfig.
 - [SYSTEM] Automatic SOH reset (clearing `batt_measured_cap`) when the user changes the declared value `batt_def_cap` from the system settings menu.
 
-===============================================================================
+
 v0.32.2 - BT Audio Engine & UI Smart Refinements (2026-05-25)
 -------------------------------------------------------------------------------
 - [BT AUDIO] Implementation of exclusive BT-only mode: direct and clean boot of the MP3 engine combined with the ESP32-A2DP stack, completely bypassing missing ES8388 hardware dependencies (I2S/I2C).
