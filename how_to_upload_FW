@@ -1,0 +1,13 @@
+Use ESP32 Espressif Flash Download Tool provided or download it from official page.
+  Select the .bin file, select ESP32-D2WD in Develop mode.
+  Select SPI speed 80 MHz.
+  Select SPI Mode DIO
+  Select "DoNotChgBin".
+Select the .bin file @ 0x0 address.
+  Select the proper COM port.
+  Baud: 921600
+
+Start.
+  Wait untill it is finished!
+  If necessary, apply RESET to the ESP32
+  
