@@ -1,4 +1,8 @@
-Use ESP32 Espressif Flash Download Tool provided or download it from official page.
+Use ESP32 Espressif Flash Download Tool provided or download it from official page
+https://docs.espressif.com/projects/esp-test-tools/en/latest/esp32/production_stage/tools/flash_download_tool.html
+
+Open the Tool.
+
   Select the .bin file, select ESP32-D2WD in Develop mode.
   Select SPI speed 80 MHz.
   Select SPI Mode DIO
