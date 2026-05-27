@@ -1,4 +1,4 @@
-# PLANNED IN VB.0.5
+# PLANNED IN vB.0.5
 --------------------------------------------------------------------------------
 - [UI/UX][POWER][SERIAL] Add Device setup item to compensate End of Charge Voltage due to variations in AXP192; add commands in Serial Protocols.
 - [UI/UX] Adjust Battery Icon appeareance for higher contrast.
