@@ -1,11 +1,14 @@
 # PLANNED IN vB.0.5
 --------------------------------------------------------------------------------
 - [UI/UX][POWER][SERIAL] Add Device setup item to compensate End of Charge Voltage due to variations in AXP192; add commands in Serial Protocols.
+- [UI/UX] Add "NR Lev" on slider carousel.
+- [UI/UX] Add function to revert to "Vol" on long press on btnB in Main Viewport.
 - [UI/UX] Adjust Battery Icon appeareance for higher contrast.
 - [UI/UX] Reorganise the items in Setup pages & subpages
 - [MP3 List] - Add wrap-around (circular) navigation in Tapes and Tracks lists
 - [POWER] - SOH (State of Health) for battery: Implement complex determination instead of simple Coulomb Counting.
-- [BUGS] - other bugs from feedback...
+- [BUGFIX][RTC][I2C_Manager] - Loss of sync at recover from BATT PROTECTION SHUTDOWN
+- [BUGFIX] - other bugs from feedback...
 
 
 # vB.0.4 - Setup Reorganization, BT Debounce Fix (2026-05-27)
