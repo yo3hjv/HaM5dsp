@@ -1,3 +1,12 @@
+# PLANNED IN VB.0.5
+--------------------------------------------------------------------------------
+- [UI/UX][POWER][SERIAL] Add Device setup item to compensate End of Charge Voltage due to variations in AXP192; add commands in Serial Protocols.
+- [UI/UX] Adjust Battery Icon appeareance for higher contrast.
+- [UI/UX] Reorganise the items in Setup pages & subpages
+- [MP3 List] - Add wrap-around (circular) navigation in Tapes and Tracks lists
+- [BUGS] - other bugs from feedback...
+
+
 # vB.0.4 - Setup Reorganization, BT Debounce Fix (2026-05-27)
 --------------------------------------------------------------------------------
 - [UI/UX] Relocating the InGain and InAtt items from the VSet (Voice Settings) submenu to the Device submenu, correctly reflecting their global nature as hardware/DSP settings applied across the entire audio pipeline, independent of the operating mode.
@@ -19,6 +28,7 @@
 
 v0.32.2 - BT Audio Engine & UI Smart Refinements (2026-05-25)
 -------------------------------------------------------------------------------
+
 - [BT AUDIO] Implementation of exclusive BT-only mode: direct and clean boot of the MP3 engine combined with the ESP32-A2DP stack, completely bypassing missing ES8388 hardware dependencies (I2S/I2C).
 - [UI/UX] Fix of graphical artifacts in the virtual keypad when exiting the Power Diagnostics screen by implementing viewport cleanup during page transitions.
 - [UI/UX] Navigation consistency improvement: returning (BACK) from BT lists (Scan / Saved) is now handled consistently via long-press on BtnA, matching the rest of the application.
