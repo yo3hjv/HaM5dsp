@@ -1,4 +1,4 @@
-# vB.0.4 - Setup Reorganization, VAS LED Option & BT Debounce Fix (2026-05-27)
+# vB.0.4 - Setup Reorganization, BT Debounce Fix (2026-05-27)
 --------------------------------------------------------------------------------
 - [UI/UX] Relocating the InGain and InAtt items from the VSet (Voice Settings) submenu to the Device submenu, correctly reflecting their global nature as hardware/DSP settings applied across the entire audio pipeline, independent of the operating mode.
 - [SYSTEM] Updating the Granular Reset logic: resetting InGain and InAtt values to their defaults is now performed from the Device submenu (RESET DEVSET DEFAULTS), not from VSet.
