@@ -1,3 +1,10 @@
+# vB.0.4 - Setup Reorganization, VAS LED Option & BT Debounce Fix (2026-05-27)
+--------------------------------------------------------------------------------
+- [UI/UX] Relocating the InGain and InAtt items from the VSet (Voice Settings) submenu to the Device submenu, correctly reflecting their global nature as hardware/DSP settings applied across the entire audio pipeline, independent of the operating mode.
+- [SYSTEM] Updating the Granular Reset logic: resetting InGain and InAtt values to their defaults is now performed from the Device submenu (RESET DEVSET DEFAULTS), not from VSet.
+- [SYSTEM][UI/UX] Mode-dependent touch debounce: the 40 ms RF filter is enabled exclusively in MP3 Player mode with Bluetooth active. In DSP mode, touch inputs are validated immediately upon release, eliminating the artificial latency introduced by the Bluetooth filter in the absence of RF interference.
+
+
 # vB.0.3 - Power Diagnostics & SOH System (2026-05-26)
 -------------------------------------------------------------------------------
 - [POWER] Implementation of SOH (State of Health) algorithm based on time integration (Coulomb Counting): the battery is continuously measured during discharge within safe thresholds (4.15V max, 3.30V minimum for capacity calculation, 3.15V cutoff threshold).
