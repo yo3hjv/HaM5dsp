@@ -4,6 +4,7 @@
 - [UI/UX] Adjust Battery Icon appeareance for higher contrast.
 - [UI/UX] Reorganise the items in Setup pages & subpages
 - [MP3 List] - Add wrap-around (circular) navigation in Tapes and Tracks lists
+- [POWER] - SOH (State of Health) for battery: Implement complex determination instead of simple Coulomb Counting.
 - [BUGS] - other bugs from feedback...
 
 
