@@ -4,7 +4,7 @@
 - [UI/UX] Add "NR Lev" on slider carousel.
 - [UI/UX] Add function to revert to "Vol" on long press on btnB in Main Viewport.
 - [UI/UX] Adjust Battery Icon Charging action appeareance for higher contrast.
-- [UI/UX] Reorganise the items in Setup pages & subpages
+- [UI/UX] Reorganise the order of items in Setup pages & subpages
 - [MP3 List] - Add wrap-around (circular) navigation in Tapes and Tracks lists
 - [POWER] - SOH (State of Health) for battery: Implement complex determination instead of simple Coulomb Counting.
 - [BUGFIX][UI/UX] When Screensaver is activated, clock and date are superimposed over the Main Viewport items. When Screensaver is device activated, all OK.
