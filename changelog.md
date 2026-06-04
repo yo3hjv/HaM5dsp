@@ -10,6 +10,8 @@
 - [BUGFIX][UI/UX] When Screensaver is activated, clock and date are superimposed over the Main Viewport items. When Screensaver is device activated, all OK.
 - [BUGFIX][UI/UX] Power Diagnostics page - Smart Refresh is needed.
 - [UI/UX] Power Diagnostics page - ADC indication no longer needed
+- [BUGFIX][UI/UX] CWspdL/CWsdpH logic in CWsetup menu not corelated to btnA-btnC actions and labels.
+la CWspdH: cand apas pe simbolul de minus incrementeaza cu 2 unitati, pe plus cu una, pozitive ambele
 - [BUGFIX] - other bugs from feedback...
 
 
