@@ -14,6 +14,10 @@
 la CWspdH: cand apas pe simbolul de minus incrementeaza cu 2 unitati, pe plus cu una, pozitive ambele
 - [BUGFIX] - other bugs from feedback...
 
+# vB.0.4f - Minor fixes (2026-06-05)
+--------------------------------------------------------------------------------
+- [UI/UX] Guard space added on nav buttons A, B, C.
+  
 
 # vB.0.4 - Setup Reorganization, BT Debounce Fix (2026-05-27)
 --------------------------------------------------------------------------------
