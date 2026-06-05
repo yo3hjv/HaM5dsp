@@ -7,12 +7,14 @@
 - [UI/UX] Reorganise the order of items in Setup pages & subpages
 - [MP3 List] - Add wrap-around (circular) navigation in Tapes and Tracks lists
 - [POWER] - SOH (State of Health) for battery: Implement complex determination instead of simple Coulomb Counting.
+- [POWER][UI/UX] Represent SoC based on VBat AND Coulomb counting not only VBat.
 - [BUGFIX][UI/UX] When Screensaver is activated, clock and date are superimposed over the Main Viewport items. When Screensaver is device activated, all OK.
 - [BUGFIX][UI/UX] Power Diagnostics page - Smart Refresh is needed.
 - [UI/UX] Power Diagnostics page - ADC indication no longer needed
 - [BUGFIX][UI/UX] CWspdL/CWsdpH edit logic in CWsetup menu not corelated to btnA-btnC actions and labels.
 la CWspdH: cand apas pe simbolul de minus incrementeaza cu 2 unitati, pe plus cu una, pozitive ambele
 - [BUGFIX] - other bugs from feedback...
+  
 
 # vB.0.4f - Minor fixes (2026-06-05)
 --------------------------------------------------------------------------------
