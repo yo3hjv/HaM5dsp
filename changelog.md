@@ -1,16 +1,23 @@
+# v0.34.0
+--------------------------------------------------------------------------------
+- [UI/UX] - BT settings obfuscated. Stack limit exceeded: Mp3Task crashed due to a stack overflow (8 KB stack too small for minimp3 + EQ + DRC). Additionally, the memory required for proper Bluetooth operation prevents correct indexing of the desired number of tracks; for stability, the track count must be significantly reduced.
+- I will continue to develop nonBT versions only.
+  
+
+
 # PLANNED IN vB.0.5
 --------------------------------------------------------------------------------
 - [UI/UX][POWER][SERIAL] Add Device setup item to compensate End of Charge Voltage due to variations in AXP192; add commands in Serial Protocols.
-- [UI/UX] Add "NR Lev" on slider carousel.
+- [UI/UX] Add "NR Lev" on slider carousel.   FIXED in 0.34.0
 - [UI/UX] Add function to revert to "Vol" on long press on btnB in Main Viewport.
 - [UI/UX] Adjust Battery Icon Charging action appeareance for higher contrast. FIXED in B.0.4i
-- [UI/UX] Reorganise the order of items in Setup pages & subpages
-- [MP3 List] - Add wrap-around (circular) navigation in Tapes and Tracks lists
-- [POWER] - SOH (State of Health) for battery: Implement complex determination instead of simple Coulomb Counting.
-- [POWER][UI/UX] Represent SoC based on VBat AND Coulomb counting not only VBat.
-- [BUGFIX][UI/UX] When Screensaver is activated, clock and date are superimposed over the Main Viewport items. When Screensaver is device activated, all OK.
-- [BUGFIX][UI/UX] Power Diagnostics page - Smart Refresh is needed.
-- [UI/UX] Power Diagnostics page - ADC indication no longer needed
+- [UI/UX] Reorganise the order of items in Setup pages & subpages. NOT YET FIXED, WAIT FOR FEEDBACK
+- [MP3 List] - Add wrap-around (circular) navigation in Tapes and Tracks lists. FIXED in B.0.4o
+- [POWER] - SOH (State of Health) for battery: Implement complex determination instead of simple Coulomb Counting. FIXED in B.0.4o
+- [POWER][UI/UX] Represent SoC based on VBat AND Coulomb counting not only VBat. NOT FIXED - NOT NECESSARY, SEE ABOVE
+- [BUGFIX][UI/UX] When Screensaver is activated via Serial, clock and date are superimposed over the Main Viewport items. FIXED in B.0.4o.
+- [BUGFIX][UI/UX] Power Diagnostics page - Smart Refresh is needed. FIXED in B.0.4o
+- [UI/UX] Power Diagnostics page - ADC indication no longer needed. FIXED in B.0.4o
 - [BUGFIX][UI/UX] CWspdL/CWsdpH edit logic in CWsetup menu not corelated to btnA-btnC actions and labels. FIXED in B.0.4g
 - [BUGFIX] - other bugs from feedback...
   
