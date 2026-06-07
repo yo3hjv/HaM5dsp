@@ -1,4 +1,4 @@
-# v0.34.0
+# v0.34.0 (2026-06-07)
 --------------------------------------------------------------------------------
 - [UI/UX] - BT settings obfuscated. Stack limit exceeded: Mp3Task crashed due to a stack overflow (8 KB stack too small for minimp3 + EQ + DRC). Additionally, the memory required for proper Bluetooth operation prevents correct indexing of the desired number of tracks; for stability, the track count must be significantly reduced.
 - I will continue to develop nonBT versions only.
