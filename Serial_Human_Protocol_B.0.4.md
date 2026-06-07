@@ -1,6 +1,6 @@
 # M5DSP – Serial Commands (Serial Commands Reference)
 
-**Version:** M5DSP vB.0.4.d | **Last update:** 2026-05-29  
+**Version:** M5DSP vB.0.4.d / v0.34.0 | **Last update:** 2026-06-07  
 **Platform:** M5Stack Core2 + ModuleAudio (ES8388) DSP Pipeline  
 **Baud rate:** 115200
 
