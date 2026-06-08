@@ -1,3 +1,19 @@
+v0.35.0 - MP3 Progress Bar, Dual InfoZone & Continuous Seek (2026-06-08)
+--------------------------------------------------------------------------------
+- [BUGFIX][UI/MP3] Progress Bar 0% Overwrite.
+- [BUGFIX][MP3] SD Card Hot-Swap Detection: Added protection against SD card removal during playback. Read errors now trigger an immediate safe stop, buffer clear, and file closure.
+- [SYSTEM][DEBUG] Wrapping Console Output: Persistent debug messages are now conditionally hidden, keeping the console clean in normal (Release) usage.
+- [MP3][PROBE] Duration & Bitrate: Implemented full-file scanning with VBR/CBR support (ignoring metadata) with silent decoder. Provides accurate track duration and estimates for the next track.
+- [UI][MP3] Dual InfoZone: The InfoZone now supports two switchable screens via Info Zone tap:
+  - Page 0: Scrolling display (Current Track, Next Track).
+  - Page 1: Static title (large), plus bitrate/type (CBR/VBR), progress bar, and remaining time.
+- [UI][MP3] Smart Refresh: Optimized partial refresh to eliminate flickering by updating only the progress area each second while keeping the title unchanged.
+- [MP3][SEEK] Continuous Seek on Long Press: Holding PREV/NEXT enables repeated seek forward/backward every 250ms. Includes full boundary protection (end of file triggers next track).
+- [SYSTEM][RAM] PSRAM Allocation optimisation.
+- [BUGFIX] Previous bugs FIXED.
+
+
+
 # v0.34.0 (2026-06-07)
 --------------------------------------------------------------------------------
 - [UI/UX] - BT settings obfuscated. Stack limit exceeded: Mp3Task crashed due to a stack overflow (8 KB stack too small for minimp3 + EQ + DRC). Additionally, the memory required for proper Bluetooth operation prevents correct indexing of the desired number of tracks; for stability, the track count must be significantly reduced.
