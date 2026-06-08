@@ -1,4 +1,4 @@
-#v0.35.0 (2026-06-08)  MP3 Progress Bar, Dual InfoZone & Continuous Seek 
+# v0.35.0 (2026-06-08)  MP3 Progress Bar, Dual InfoZone & Continuous Seek 
 --------------------------------------------------------------------------------
 - [BUGFIX][UI/MP3] Progress Bar 0% Overwrite.
 - [BUGFIX][MP3] SD Card Hot-Swap Detection: Added protection against SD card removal during playback. Read errors now trigger an immediate safe stop, buffer clear, and file closure.
