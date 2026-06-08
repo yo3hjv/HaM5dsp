@@ -11,7 +11,7 @@ To run this firmware, the following hardware configuration is mandatory:
 * Audio Interface: **M144 ES8388 Audio Module**
 * Base Expansion: **Bottom2**
 
-The **M1.0.0 MP3Player Release ("Free Use")** transforms the HaM5dsp device into a dedicated, premium, standalone audio player designed for high-fidelity playback of MP3 files from an SD card. This version has been decoupled from any licensing requirements and boots directly and exclusively into the music player interface.
+The **HaM5dsp-MP3Player ("Free Version M1.0.0")** transforms the HaM5dsp device into a dedicated, premium, standalone audio player designed for high-fidelity playback of MP3 files from an SD card. This version has been decoupled from any licensing requirements and boots directly and exclusively into the music player interface.
 
 The interface offers an extremely fluid user experience, combining hierarchical navigation (the "Cassette" system), precise touch control assisted by a native haptic engine, and an adaptive "Dual InfoZone" display. The user experience is complex and highly interactive: users are encouraged to explore the functionalities by executing short and long touches on various UI elements across the screen (for example, a long press on the battery icon reveals hidden power management details).
 
