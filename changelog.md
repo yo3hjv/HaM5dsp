@@ -1,3 +1,27 @@
+================================================================================
+v0.35.0 to v0.36.7 - Features & Bug Fixes Summary (2026-06-13)
+--------------------------------------------------------------------------------
+- [POWER] Refined battery capacity measurement (Coulomb Counting) by automatically detecting charge completion and starting tracking only when discharging below the 4.12V maximum reference voltage.
+- [POWER] Saved the real capacity value under a dedicated persistent internal storage key to survive firmware upgrades and global setting resets.
+- [POWER] Disabled VBUS at startup to prevent current loops and back-feeding when operating on battery.
+- [DSP] Replaced technical decay coefficient with a user-friendly millisecond parameter (default 500ms) for the LED signal level meter.
+- [DSP] Implemented a dual-bar LED visualizer in DSP Mode (Left shows raw ADC input level, Right shows digitally attenuated level).
+- [DSP] Added a 1 KHz sinus test tone generator (selectable as OFF, Left channel, Right channel, or Both channels).
+- [UI] Added a visual red overload warning ("OVL!") on the VOICE/CW selection button that highlights for 1 second when the audio input signal exceeds safe limits (clipping).
+- [UI] Implemented dual-page screens in the top display Info Zone (Page 0 for scrolling track info, Page 1 for static title, bitrate, progress bar, and remaining playback time).
+- [UI] Fixed live redraw issues on the DevSet settings page, ensuring configuration changes update immediately on screen.
+- [MP3] Added proactive SD Card Hot-Swap protection to stop the engine and clean up file handles immediately if the SD card is removed during playback.
+- [MP3] Implemented continuous track fast-forward/rewind (seeking) every 250ms when long-pressing the Next/Previous buttons.
+- [MP3] Rebuilds the active playlist immediately in the background upon selecting tapes/cassettes without stopping the current track if it remains selected.
+- [MP3] Fixed playback speeds by pre-scanning track sample rates and adjusting hardware clocks dynamically before starting playback.
+- [MP3] Introduced an anti-stuck watchdog that automatically skips corrupt or incompatible MP3 files after 5 seconds of inactivity.
+- [MP3] Linearized volume control (0-100%) for natural and predictable volume adjustments on both MP3 and DSP modes.
+- [MP3] Fixed playlist navigation labels and tape checkbox toggling when long-pressing the select button.
+- [AUDIO] Fixed unprocessed signal leakage into the right channel in Voice Mode (Left channel is now cleanly duplicated).
+- [SERIAL] Streamlined status query responses by removing the ~ACK suffix, keeping it only for write commands and actions.
+- [SERIAL] Added real-time status updates over the serial port whenever settings are adjusted manually on the screen menus or when page screens cycle.
+
+
 # v0.35.0 (2026-06-08)  MP3 Progress Bar, Dual InfoZone & Continuous Seek 
 --------------------------------------------------------------------------------
 - [BUGFIX][UI/MP3] Progress Bar 0% Overwrite.
