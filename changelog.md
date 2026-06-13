@@ -1,4 +1,4 @@
-================================================================================
+
 v0.35.0 to v0.36.7 - Features & Bug Fixes Summary (2026-06-13)
 --------------------------------------------------------------------------------
 - [POWER] Refined battery capacity measurement (Coulomb Counting) by automatically detecting charge completion and starting tracking only when discharging below the 4.12V maximum reference voltage.
