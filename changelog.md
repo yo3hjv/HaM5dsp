@@ -1,3 +1,16 @@
+# v1.0.6 - Haptic, Serial EQ & Bulletproof SD LFN Fallback (2026-06-14)
+--------------------------------------------------------------------------------
+- [FIX][HAPTIC] Haptic vibrations no longer get stuck during long track loading. Vibrations now stop correctly before playback begins.
+- [FIX][EQ SYNC] EQ mode changes are now instantly reflected in the Companion app, ensuring accurate synchronization when switching modes.
+- [IMPROVEMENT][SD] Significantly improved file opening reliability. Tracks now load correctly even if filenames contain special or uncommon characters.
+- [NEW][EXPORT] Full preset export added. All saved Voice and CW configurations are now included during synchronization with external tools.
+- [FIX][PLAYBACK] Improved playback stability. Eliminated random track skips and file read errors from the SD card.
+- [FIX][FILE NAMES] Tracks with special characters in their names now load correctly without requiring manual renaming.
+- [IMPROVEMENT][TOUCH] DSP sliders now respond instantly, with no lag when adjusting settings.
+- [FIX][PLAYBACK START] Fixed rare playback startup issues that could prematurely stop tracks.
+- [IMPROVEMENT][AUDIO] More reliable handling of corrupted audio data, resulting in smoother playback.
+- [TEST] Internal testing tools updated for better haptic feature coverage.
+
 # v1.0.0 Release Version (2026-06-13)
 ________________________________________________________________________________
 
