@@ -1,6 +1,7 @@
 # HaM5dsp
 ## Advanced Audio DSP Software for HF Reception
 
+## DUE TO A HARDWARE CONFLICT, TO USE M5go BOTTOM2 NEED A MODIFICATION (PHYSICAL REMOVAL OF ONE PIN FROM THE M5BUS) 
 **Turn any receiver into a precision listening instrument.**
 
 **HaM5dsp** is a portable DSP audio processor designed for serious radio operators who demand clarity, separation, and control—even from receivers without built-in DSP.  
