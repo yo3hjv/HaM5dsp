@@ -1,6 +1,7 @@
 # HaM5dsp - MP3Player Release (M1.0.0 "Free Use")
 **User Guide & Features Overview**
 
+## NOTE: This FW have a slow update rate!
 ---
 
 ## 1. Introductory Summary
