@@ -1,5 +1,6 @@
 # v1.0.7 - NVS SOH Sync Fixes & UI Refinements (2026-06-15) *In testing*
 --------------------------------------------------------------------------------
+## NOTE: This update requires an ERASE FLASH before updating and re-entering the License Key.
 - [BUGFIX][POWER] Fixed a critical RAM–NVS sync issue that reset the battery’s real capacity (SOH) to `0.0 mAh` on every reboot. The correct measured value now persists reliably across restarts.
 - [BUGFIX][POWER] Ensured the measured battery capacity is properly saved when users change battery capacity or reset the device from DevSet → BATT_CAP.
 - [BUGFIX][UI/UX] Fixed a refresh issue in *Power Diagnostics* where the first smart redraw could be skipped during scrolling.
