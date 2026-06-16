@@ -1,3 +1,17 @@
+# v1.0.7 - NVS SOH Sync Fixes & UI Refinements (2026-06-15) *In testing*
+--------------------------------------------------------------------------------
+- [BUGFIX][POWER] Fixed a critical RAM–NVS sync issue that reset the battery’s real capacity (SOH) to `0.0 mAh` on every reboot. The correct measured value now persists reliably across restarts.
+- [BUGFIX][POWER] Ensured the measured battery capacity is properly saved when users change battery capacity or reset the device from DevSet → BATT_CAP.
+- [BUGFIX][UI/UX] Fixed a refresh issue in *Power Diagnostics* where the first smart redraw could be skipped during scrolling.
+- [FEATURE][SERIAL] Added `dumpnvs` command (Human Protocol) to inspect stored NVS data in read-only mode and quickly detect mismatches between flash storage and runtime configuration.
+- [UI/UX][SLIDER] Improved frequency sliders (Lcut, Hcut, CF, BW) with quadratic scaling for much finer control in lower frequency ranges.
+- [FEATURE][UI/UX] Added quick toggle for Date (EU ↔ US) and Time format (Local ↔ UTC) via long-press on the main screen clock/date area.
+- [FEATURE][PERSISTENCE] Date/time format preference is now saved and persists across reboots.
+- [FEATURE][SERIAL] Added Machine Protocol commands (`DATU`, `DATE`, `HLOC`, `HUTC`) for explicit format control, also included in async handshake responses.
+- [FEATURE][DSP] Added selectable I2S input channel (Left/Right) for improved audio flexibility, enabling bypass of hardware filtering for cleaner Hi-Fi input.
+- [FEATURE][UI/UX] Added `FFTspan` setting (DevSet → Voice Settings) to adjust FFT display range (4 kHz / 7 kHz / 10 kHz), with persistent storage.
+  
+
 # v1.0.6 - Haptic, Serial EQ & Bulletproof SD LFN Fallback (2026-06-14)
 --------------------------------------------------------------------------------
 - [FIX][HAPTIC] Haptic vibrations no longer get stuck during long track loading. Vibrations now stop correctly before playback begins.
