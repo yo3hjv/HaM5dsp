@@ -1,6 +1,6 @@
 # HaM5dsp
 ## Advanced Audio DSP Software for HF Reception
-
+You can also check my blog for HaM5dsp: https://yo3hjv.substack.com/t/ham5dsp
 ## !!! DUE TO A HARDWARE CONFLICT, TO USE M5go BOTTOM2 NEED A MODIFICATION (PHYSICAL REMOVAL OF ONE PIN FROM THE M5BUS)!!! 
 **Turn any receiver into a precision listening instrument.**
 
