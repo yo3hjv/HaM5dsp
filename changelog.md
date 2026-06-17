@@ -1,9 +1,10 @@
 # v1.0.8 – CW 3D Linear Panning & FFT Info Zone (2026-06-17)
 --------------------------------------------------------------------------------
 ## NOTE: This update doesn not require ERASE FLASH and recovers previous user settings
-[UI/UX] FFT Info Zone: In CW mode now dynamically displays the current Center Frequency (CF) on the left and Bandwidth (BW) on the right. In Voice mode, displays Low Cut (LC) on the left and High Cut (HC) on the right. The previous Span display has been removed to make space for these critical parameters, with both modes benefiting from symmetrical protected background boxes.
-[UI/UX] Moved the "Bal." (Balance) parameter from the VSet (Voice Settings) submenu to the Device tab, last position, right after the 1 kHz test tone. It can now be reset directly from the Device menu.
-[DSP] Implemented a Hybrid Linear model for 3D CW spatialization. Frequencies outside the filter are now clamped at maximum phase (180°) and maximum left/right width, creating absolute physical separation (rear positioning) of low-frequency interference (left) and high-frequency interference (right), leaving the desired signal (inside the filter) clean in the center. The default value for Alpha 3D is 6.
+- [UI/UX] FFT Info Zone: In CW mode now dynamically displays the current Center Frequency (CF) on the left and Bandwidth (BW) on the right. In Voice mode, displays Low Cut (LC) on the left and High Cut (HC) on the right. The previous Span display has been removed to make space for these critical parameters, with both modes benefiting from symmetrical protected background boxes.
+- [UI/UX] Moved the "Bal." (Balance) parameter from the VSet (Voice Settings) submenu to the Device tab, last position, right after the 1 kHz test tone. It can now be reset directly from the Device menu.
+- [DSP] Implemented a Hybrid Linear model for 3D CW spatialization. Frequencies outside the filter are now clamped at maximum phase (180°) and maximum left/right width, creating absolute physical separation (rear positioning) of low-frequency interference (left) and high-frequency interference (right), leaving the desired signal (inside the filter) clean in the center. The default value for Alpha 3D is 6.
+- [FEATURE][SERIAL] Addition of the `fwversion` (Human Protocol) and `FWVE` (Machine Protocol) commands to report the installed firmware version to the console or Companion App.
 
 
 # v1.0.7 - NVS SOH Sync Fixes & UI Refinements (2026-06-15)
