@@ -1,3 +1,8 @@
+================================================================================
+v1.0.9 - Fine Tune Battery Capacity Determination (2026-06-18)
+--------------------------------------------------------------------------------
+
+
 # v1.0.8 – CW 3D Linear Panning & FFT Info Zone (2026-06-17)
 --------------------------------------------------------------------------------
 ## NOTE: This update doesn not require ERASE FLASH and recovers previous user settings
