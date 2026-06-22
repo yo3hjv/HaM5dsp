@@ -1,5 +1,14 @@
-# v1.0.9 - Fine Tune Battery Capacity Determination (2026-06-18)
+# v1.0.10 - UI/UX Refinements & PEK Config (2026-06-22)
 --------------------------------------------------------------------------------
+## NOTE: This update doesn not require ERASE FLASH and recovers previous user settings
+- [BUGFIX][UI/UX] Filtering of I2C errors (read timeouts / Wire failures) on the FT6336U bus. This eliminates unwanted phantom auto-jumps in the MP3Player module's List menu.
+- [UI/UX] Removal of the redundant "Balance" setting from the MP3set tab in the Setup menu (DevSet), as the function is already present in the general Device tab (DevSet).
+- [UI/UX] Moving the "HP Std" setting from the VSet submenu (Voice Settings) to the general Device tab (DevSet), because the audio jack standard for headphones (ground/mic pins) is a global hardware property.
+- [UI/UX] Renaming the option labels for the headphone standard from "American" and "National" to the more user-friendly modern forms "CTIA (New)" and "OMTP (Old)", respectively.
+- [POWER][COMPILATION] Moving the configuration for the physical Power button (AXP192 PEK - Reg 0x36) into the global `config.h` file under the constant `AXP192_PEK_REG_CONFIG` for quick access and modification of power on/off timings, automatically applied during the boot sequence.
+- [BUGFIX][SERIAL] Fixed parsing of haptic durations from Human Protocol. The `haptshortdur` and `haptlongdur` commands are now correctly recognized and configured in NVS.
+- [DOCUMENTATION] Alignment of the `Human_serial.txt` documentation by replacing the old `haptshortx` / `haptlongx` parameters with `haptshortdur` and `haptlongdur`.
+- [DUMP] Added display of the `haptshortdur` and `haptlongdur` parameters in the `dump` diagnostic output (`dspDumpAll`).
 
 
 # v1.0.8 – CW 3D Linear Panning & FFT Info Zone (2026-06-17)
