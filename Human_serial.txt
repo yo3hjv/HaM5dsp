@@ -1,6 +1,6 @@
 ================================================================================
   M5DSP – Serial Commands (Serial Commands Reference)
-  Version: M5DSP v1.0.8 upward  |   Last update: 2026-06-17
+  Version: M5DSP v1.0.10 upward  |   Last update: 2026-06-22
   M5Stack Core2 + ModuleAudio (ES8388) DSP Pipeline
   Baud rate: 115200
 ================================================================================
@@ -42,11 +42,12 @@ dumpnvs         -                   Show NVS status (physical vs RAM). ACTION
 fftfloor        0.0 - 10.0          Set FFT baseline level. ARG
 fftrange        0.1 - 10.0          Set FFT dynamic range. ARG
 fftspanv        500 - 8000          Set FFT VOICE span. ARG
-hapton/off      -                   Global haptic ON/OFF. ON/OFF
+hapton/off      -                   Global Haptic ON/OFF. ON/OFF
+haptlongdur     10 - 2000           Long Haptic Duration (ms). ARG
 haptlong        -                   Trigger long vibration. ACTION
-haptlong x      10 - 2000           Set long vibration duration. ARG
+haptshortdur    10 - 1000           Short Haptic Duration (ms). ARG
+haptshort       -                   Declanșează vibrație scurtă. ACTION
 haptshort       -                   Trigger short vibration. ACTION
-haptshortx      10 - 1000           Set short vibration duration. ARG
 help            -                   Display command list. ACTION
 hicut           1200 - 10500        Set VOICE hi-cut filter. ARG
 hpinfo          -                   Display headphone jack status. ACTION
