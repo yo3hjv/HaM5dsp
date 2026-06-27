@@ -1,4 +1,5 @@
-# M5DSP Preset & License Programmer
+===========================================================
+# 1. HaM5dsp_serial_utility.py - M5DSP Preset & License Programmer
 
 This utility script is designed to program some predefined values into Voice and CW DSP presets (as a starting point)  as well as license validation keys onto the **HaM5dsp** (M5Stack Core2) device via a serial (USB) link.
 
@@ -90,3 +91,24 @@ HaM5dsp will reboot now.
 
 - **PermissionError: Access is denied**: This means the port is already in use by another software (Arduino IDE, Cura, Putty, etc.). Close the other application, and the script will let you re-select the port to retry.
 - **TIMEOUT Errors**: Make sure your M5DSP firmware is running and responsive. Ensure you are using the correct baud rate (default: `115200`).
+
+
+===========================================================
+- # 2. Simple_serial.py -  Simple Serial Terminal
+This utility script is a simple terminal to send commands in Human protocol to **HaM5dsp** (M5Stack Core2) device via seria port.
+
+## Requirements
+
+1. **Python 3.x** installed on your system.
+2. **PySerial** module. You can install it via pip:
+   ```bash
+   pip install pyserial
+   ```
+## How to Use
+
+1. Connect your **M5Stack Core2** (HaM5dsp) to your computer using a USB Type-C cable.
+2. Close any programs that might lock the serial connection (such as the Arduino Serial Monitor).
+3. Open a terminal/command prompt, navigate to the script's directory, and run:
+   ```bash
+   python Simple_serial.py
+   ```
