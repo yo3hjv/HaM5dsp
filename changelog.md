@@ -1,3 +1,10 @@
+# v1.1.0 - MP3 Player PSRAM Optimization & SD Index Refactor (2026-06-27)
+## NOTE: This update doesn not require ERASE FLASH and recovers previous user settings
+--------------------------------------------------------------------------------
+- [MP3][MEMORY] Refactored code. Moved track indexing structures from internal DRAM to external PSRAM (SPIRAM).
+  → Frees 250+ KB DRAM at boot; prevents black screen and system freezes when scanning large exFAT cards (~2500 tracks).
+
+
 # v1.0.10 - UI/UX Refinements & PEK Config (2026-06-22)
 --------------------------------------------------------------------------------
 ## NOTE: This update doesn not require ERASE FLASH and recovers previous user settings
