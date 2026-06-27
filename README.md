@@ -1,12 +1,14 @@
 # HaM5dsp
 ## Advanced Audio DSP Software for HF Reception
-## See changelog.md for latest features, modsand fixed bugs.
+## See changelog.md for latest features, mods and fixed bugs.
 You can also check my blog for HaM5dsp: https://yo3hjv.substack.com/t/ham5dsp
 ## !!! DUE TO A HARDWARE CONFLICT, TO USE M5go BOTTOM2 NEED A MODIFICATION (PHYSICAL REMOVAL OF TWO PINS FROM THE M5BUS)!!! 
 **Turn any receiver into a precision listening instrument.**
 
 **HaM5dsp** is a portable DSP audio processor designed for serious radio operators who demand clarity, separation, and control—even from receivers without built-in DSP.  
 Simply connect it to any line-out signal from a receiver and rediscover HF bands.
+
+**MP3Player** is a fork of the main code with only MP3Player features. The FW version have all the updates like the HaM5dsp FW version.
 
 ---
 
