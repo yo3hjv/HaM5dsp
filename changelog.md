@@ -7,6 +7,7 @@
   → Frees 250+ KB DRAM at boot; prevents black screen and system freezes when scanning large exFAT cards (~2500 tracks).
 - [MP3][UI/UX] GFX processes moved in PSRAM to free space in internal SRAM.
 - [BUGFIX][MP3] Fixing the FFW/REW function (Long Press on Prev/Next) crash.
+- [HW][POWER] Fine tuned lower threshold for Battery Capacity measurement due to wide tolerances in Core2 PMIC HW components.
 
 
 # v1.0.10 - UI/UX Refinements & PEK Config (2026-06-22)
