@@ -1,3 +1,5 @@
+## Note: The updates are cumulative; just update to the latest. The changelog keeps track also on unreleased versions!
+
 # v1.1.0 - MP3 Player PSRAM Optimization & SD Index Refactor (2026-06-27)
 ## NOTE: This update doesn not require ERASE FLASH and recovers previous user settings
 --------------------------------------------------------------------------------
