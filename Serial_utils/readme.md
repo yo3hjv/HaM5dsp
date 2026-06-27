@@ -94,7 +94,7 @@ HaM5dsp will reboot now.
 
 
 ===========================================================
-- # 2. Simple_serial.py -  Simple Serial Terminal
+# 2. Simple_serial.py -  Simple Serial Terminal
 This utility script is a simple terminal to send commands in Human protocol to **HaM5dsp** (M5Stack Core2) device via seria port.
 
 ## Requirements
