@@ -3,6 +3,8 @@
 --------------------------------------------------------------------------------
 - [MP3][MEMORY] Refactored code. Moved track indexing structures from internal DRAM to external PSRAM (SPIRAM).
   → Frees 250+ KB DRAM at boot; prevents black screen and system freezes when scanning large exFAT cards (~2500 tracks).
+- [MP3][UI/UX] GFX processes moved in PSRAM to free space in internal SRAM.
+- [BUGFIX][MP3] Fixing the FFW/REW function (Long Press on Prev/Next) crash.
 
 
 # v1.0.10 - UI/UX Refinements & PEK Config (2026-06-22)
