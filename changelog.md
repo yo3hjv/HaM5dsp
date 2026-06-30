@@ -1,5 +1,21 @@
 ## Note: The updates are cumulative; just update to the latest. The changelog keeps track also on unreleased versions!
 
+# v1.2.0 - MAJOR UPDATE. UART OTA Update & Security Gating (2026-06-30)
+--------------------------------------------------------------------------------
+- [OTA][UART] Implementation of the "in-application" firmware update system over serial cable (UART OTA) using the native ESP-IDF A/B partition APIs.
+- [OTA][SECURITY] Restriction of firmware update execution exclusively to devices with a APP license. 
+- [OTA][UI/UX] Added visual feedback during updates: the Info area is overlaid with a light red background and black `"FIRMWARE UPDATING"` text displayed on two lines, while also applying a hardware mute at the codec level.
+- [OTA][STABILITY] Implementation of a dedicated 10 KB heap buffer and a 15-second inactivity timeout for automatic recovery from errors or accidental cable disconnections.
+- [NVS] Implementation of the full backward compatibility across firmware version changes. Since this version on.
+- [MP3][UI/UX] Alignment of the haptic and visual behavior of the virtual keyboard (K0 - K5) in MP3 Player mode with that of DSP mode (pressing a key triggers short haptic feedback and a 3D pressed-in visual effect).
+- [MP3][UI/UX] Action execution moved to release (Touch-Up) with Cancel-on-Slide protection support for all MP3 module keys.
+- [SYSTEM][HARDWARE] Implementation of a global mutex for serializing access to the shared SPI bus. This prevents concurrent direct writes to SPI hardware registers, eliminating Guru Meditation errors and audio sample stuttering/duplication during intensive GUI interaction.
+- [BUGFIX][SD_Manager] Automatic and safe locking of all SD card read, write, seek, and directory listing operations.
+- [DEBUG] Added granular debugging configuration options `NVS_DEBUG_LOGS_ENABLED` and `SD_DEBUG_LOGS_ENABLED` in `config.h` to make NVS and SD_Manager debug messages fully conditional and configurable.
+- [BUGFIX][MP3][UI/UX] Fixed smooth scrolling for the "Current Track" row.
+- [MP3][UI/UX] Added display of the folder/tape name in square brackets `[FolderName]` for both rows (current track and next track) in the Info area. Folder details are extracted from the full file path stored on the SD card.
+
+
 # v1.1.0 - MP3 Player PSRAM Optimization & SD Index Refactor (2026-06-27)
 ## NOTE: This update doesn not require ERASE FLASH and recovers previous user settings
 --------------------------------------------------------------------------------
