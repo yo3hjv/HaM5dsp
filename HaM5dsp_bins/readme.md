@@ -1,5 +1,5 @@
 # M5DSP Flashing & Firmware Update Guide ( from v1.2.0)
-
+## Current Firmeware version available for download: 1.2.0
 This guide describes how to program the firmware onto your M5Stack Core2 device, either for the first time (blank chip) or when updating an existing installation.
 
 ---
@@ -18,20 +18,13 @@ There are three ways to flash or update the M5DSP firmware:
 
 Introduced in **v1.2.0**, this method allows updating the device over the USB-Serial cable without putting the ESP32 into bootloader mode. The running app receives the firmware block-by-block and writes it to the inactive flash partition.
 
-* **License Requirement**: Requires a **Tier 7** active license (`TIER_DSP` + `TIER_MP3` + `TIER_APP`).
+* **License Requirement**: Requires a **FULL Tier7** active license (`DSP+MP3+APP`).
 * **Preservation**: 100% of your NVS configurations, callsign licenses, and battery health calibrations are preserved.
 * **Brick Protection**: If the cable is disconnected during transfer, the device continues running the old firmware normally.
 
-### Serial Protocol (Machine Mode):
-1. **Initiate**: Send `FWUP:<size_bytes>` (e.g. `FWUP:1445888`).
-   - The device mutes audio, turns the screen red displaying `"FIRMWARE UPDATING"`, and prepares the flash.
-   - Responds with `!FWUP~ACK` when ready.
-2. **Transfer Blocks**: Send `FWPK:<index>:<len>:<hex_data>:<crc16_hex>`.
-   - The app sends data in chunks (typically 512 or 1024 bytes) hex-encoded.
-   - Device checks CRC-16. If valid, writes to flash and returns `!FWPK<index>~ACK`. If invalid, returns `~NACK` and the block is resent.
-3. **Finalize**: Send `FWND`.
-   - The device computes a global SHA-256 hash of the written partition and compares it to the embedded signature.
-   - If valid, responds `!FWND~ACK` and reboots into the new firmware.
+### Serial Protocol via USB Cable (APP Mode)
+Connect the Core2 to Android Phone via USB-C cable.
+Select Update Firmware, choose FW ''.ino.bin'' file and press UPLOAD.
 
 ---
 
@@ -40,7 +33,7 @@ Introduced in **v1.2.0**, this method allows updating the device over the USB-Se
 You can use browser-based tools such as the [ESP Web Flasher](https://espressif.github.io/esptool-js/) to program the device. 
 
 ### A. Performing a Standard Update (Preserves Settings)
-If your device already has the bootloader and partition table flashed, you only need to update the application itself.
+If your device already has the bootloader and partition table flashed (just updating FW), you only need to update the application itself.
 
 1. Connect your M5Stack Core2 to your PC via USB.
 2. Open the Web Serial Flasher in Google Chrome.
@@ -49,7 +42,7 @@ If your device already has the bootloader and partition table flashed, you only 
 5. Set the offset address to **`0x10000`** (Hexadecimal).
    > [!CAUTION]
    > Do **NOT** flash the app binary at `0x0`. Doing so will overwrite the bootloader and crash the device.
-6. Click **Program / Flash**. This will update the application code but leave the NVS partition (which stores configurations and licenses at `0x9000`) untouched.
+6. Click **Program / Flash**. This will update the application code but leave the NVS partition (which stores user configurations) untouched.
 
 ---
 
