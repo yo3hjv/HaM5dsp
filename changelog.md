@@ -1,6 +1,18 @@
 ## Note: The updates are cumulative; just update to the latest. The changelog keeps track also on unreleased versions!
+## NOTE: This update doesn not require ERASE FLASH and recovers previous user settings
+
+# v1.3.0 - MAJOR UPDATE. BT Enabled & UI/UX Refinements
+- [BT][UI/UX] Full reactivation of the BTset Bluetooth menu as the third tab in MP3 Player mode
+- [BT][STABILITY] Dynamic connection without reboot
+- [BT][AUDIO] Dynamic I2S management
+- [MP3][BT][VU-METER] Extended range of colors
+- [BT][TOUCH] Integration of configurable RF-interference-resistant touch debounce
+- [UI/UX] Implemented dual haptic feedback when exiting the screensaver: a short feedback  on the first screen touch (touch-down), followed by a long feedback  immediately after the main interface has been fully redrawn.
+- [BT][SYSTEM] Preparations for App connection via BT serial.
+
 
 # v1.2.0 - MAJOR UPDATE. UART OTA Update & Security Gating (2026-06-30)
+## NOTE: This update doesn not require ERASE FLASH and recovers previous user settings
 --------------------------------------------------------------------------------
 - [OTA][UART] Implementation of the "in-application" firmware update system over serial cable (UART OTA) using the native ESP-IDF A/B partition APIs.
 - [OTA][SECURITY] Restriction of firmware update execution exclusively to devices with a APP license. 
