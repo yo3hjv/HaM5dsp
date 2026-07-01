@@ -7,7 +7,6 @@
 - [OTA][UI/UX] Added visual feedback during updates: the Info area is overlaid with a light red background and black `"FIRMWARE UPDATING"` text displayed on two lines, while also applying a hardware mute at the codec level.
 - [OTA][STABILITY] Implementation of a dedicated 10 KB heap buffer and a 15-second inactivity timeout for automatic recovery from errors or accidental cable disconnections.
 - [NVS] Implementation of the full backward compatibility across firmware version changes. Since this version on.
-- [MP3][UI/UX] Alignment of the haptic and visual behavior of the virtual keyboard (K0 - K5) in MP3 Player mode with that of DSP mode (pressing a key triggers short haptic feedback and a 3D pressed-in visual effect).
 - [MP3][UI/UX] Action execution moved to release (Touch-Up) with Cancel-on-Slide protection support for all MP3 module keys.
 - [SYSTEM][HARDWARE] Implementation of a global mutex for serializing access to the shared SPI bus. This prevents concurrent direct writes to SPI hardware registers, eliminating Guru Meditation errors and audio sample stuttering/duplication during intensive GUI interaction.
 - [BUGFIX][SD_Manager] Automatic and safe locking of all SD card read, write, seek, and directory listing operations.
