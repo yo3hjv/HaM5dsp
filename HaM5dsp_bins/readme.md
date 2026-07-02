@@ -1,5 +1,5 @@
 # M5DSP Flashing & Firmware Update Guide ( from v1.2.0)
-## Current Firmeware version available for download: 1.2.0
+
 This guide describes how to program the firmware onto your M5Stack Core2 device, either for the first time (blank chip) or when updating an existing installation.
 
 ---
