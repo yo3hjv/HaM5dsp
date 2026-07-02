@@ -3,10 +3,14 @@
 
 # v1.3.0 - MAJOR UPDATE. BT Enabled & UI/UX Refinements
 - [BT][UI/UX] Full reactivation of the BTset Bluetooth menu as the third tab in MP3 Player mode
-- [BT][STABILITY] Dynamic connection without reboot
-- [BT][AUDIO] Dynamic I2S management
-- [MP3][BT][VU-METER] Extended range of colors
-- [BT][TOUCH] Integration of configurable RF-interference-resistant touch debounce
+- [BT][AUDIO][STABILITY] Switch between BT and wired Headphones added. Seamless PLay on BT or Heapdhones.
+- [MP3][BT][VU-METER] Extended range of colors.
+- [BT][VU-METER] Full real-time dynamic control implementation directly from the MP3set menu: 
+  - Element renaming: VU Leds: ON/OFF, VU Bright: 1-96 (excluding 0), and VU Mode: Simple / Rainbow for absolute consistency. 
+  - Interaction: Changing values via BtnA/BtnC benefits from cyclic end-to-end behavior (wrap-around) and instant visual application on the SK6812 LEDs for live feedback.
+  - Simple style: The 0–100% audio level is mapped linearly across the 5 LEDs using classic fixed colors (first two green, middle yellow, pre-peak orange, peak red).
+  - Rainbow style: Solid green illumination from 0 to around 35% of the max volume on mp3 file. Above the threshold, all 5 LEDs remain lit but dynamically change color in a smooth psychedelic rainbow gradient (Green->Blue->Violet->Red) with a 20-degree phase offset on each LED (cascade/wave effect).
+- [BT][TOUCH] Integration of RF-interference-resistant touch debounce
 - [UI/UX] Implemented dual haptic feedback when exiting the screensaver: a short feedback  on the first screen touch (touch-down), followed by a long feedback  immediately after the main interface has been fully redrawn.
 - [BT][SYSTEM] Preparations for App connection via BT serial.
 
