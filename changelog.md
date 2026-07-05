@@ -1,4 +1,8 @@
 ## Note: The updates are cumulative; just update to the latest. The changelog keeps track also on unreleased versions!
+# v1.5.6 - Bug solving (2026-07-05)
+## NOTE: This update doesn not require ERASE FLASH and recovers previous user settings
+[BUGFIX][BT][MP3] 
+- Stutter/cracks when listen in MP3Player on BT Sink solved.
 
 # v1.5.5 - MAJOR UPDATE. BLE in DSP Mode enabled. BT A2DP Stability, New Serial commands, Audio Improvements & Advanced Equalizer (2026-07-05)
 ## NOTE: This update doesn not require ERASE FLASH and recovers previous user settings
@@ -54,7 +58,7 @@
 [BUGFIXES] 
 - A ton of them!
 
-# Known Bug in MP3Player Mode on BT A2DP: Cracks on some files. I have an ideea, it will be solved in next release.
+# Known Bug in MP3Player Mode on BT A2DP: Stutter/cracks on some files. I have an ideea, it will be solved in next release.
 --------------------------------------------------------------------------------
 
 
