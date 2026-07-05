@@ -1,7 +1,65 @@
 ## Note: The updates are cumulative; just update to the latest. The changelog keeps track also on unreleased versions!
+
+# v1.5.5 - MAJOR UPDATE. BLE in DSP Mode enabled. BT A2DP Stability, New Serial commands, Audio Improvements & Advanced Equalizer (2026-07-05)
 ## NOTE: This update doesn not require ERASE FLASH and recovers previous user settings
+[SYSTEM][MP3]
+- Refactored Audio Pipeline in MP3Player Mode.
+- 7 bands EQ added for improved User Experience in MP3Player Mode.
+
+[SYSTEM][BT]
+- BLE Serial for OTA and Companion App communication.
+- Fixed a startup issue that could occur when rebooting into DSP mode with Bluetooth enabled.
+- Optimized memory usage for improved stability in DSP mode.
+- Improved Bluetooth initialization to prevent crashes.
+- Prevented unwanted Bluetooth service restarts in DSP mode while preserving user preferences.
+
+[UI/UX]
+- Expanded VU-Meter options with four display modes: OFF, Simple, Rainbow and Point.
+- Added quick access to analog volume control in the DEVICE menu.
+- Fixed alignment and navigation issues in the MP3 interface.
+- Removed graphical artifacts when switching lists in the MP3 interface.
+
+[AUDIO][MP3]
+- Eliminated audio artifacts that could occur when changing tracks, both on local playback and Bluetooth output.
+- Reduced transition noises between tracks for a cleaner listening experience.
+
+[AUDIO][VOLUME]
+- Unified analog volume control across all operating modes.
+- Applied analog volume adjustments instantly in both DSP and MP3 Player modes.
+
+[EQ & AUDIO PROCESSING]
+- Introduced an advanced 7-band equalizer available for both factory presets and user presets.
+- Added a USER preset for full audio customization.
+- Introduced a dedicated EQ editing mode with direct access to each frequency band.
+- Improved EQ adjustment usability with a centered editing mode around the neutral value.
+- Added an independent Pre-Gain control for managing signal levels before processing.
+- Reorganized the audio processing chain for improved sound quality and more precise dynamic control.
+- Reduced the risk of digital distortion through optimized signal level management.
+ 
+[LED]
+- In DSP Mode: replaced the bargraph display with a clearer Peak indicator for signal level monitoring.
+- Fully integrated LED display settings into a unified configuration system in Device Setup.
+- Eliminated LED flickering and improved visual effect stability.
+- Improved and corrected VU-meter visualization to ensure symmetrical audio level representation.
+
+[STABILITY & COMPATIBILITY]
+- Added protection against excessive settings saves during rapid adjustments.
+- Improved firmware upgrade compatibility without affecting existing settings.
+
+[CONTROL & INTEGRATION]
+- Expanded control and diagnostic capabilities for new audio and display features.
+- Added remote control support for the new audio parameters.
+- Extended synchronization of settings between the user interface and external control systems.
+
+[BUGFIXES] 
+- A ton of them!
+
+# Known Bug in MP3Player Mode on BT A2DP: Cracks on some files. I have an ideea, it will be solved in next release.
+--------------------------------------------------------------------------------
+
 
 # v1.3.0 - MAJOR UPDATE. BT Enabled & UI/UX Refinements
+## NOTE: This update doesn not require ERASE FLASH and recovers previous user settings
 - [BT][UI/UX] Full reactivation of the BTset Bluetooth menu as the third tab in MP3 Player mode
 - [BT][AUDIO][STABILITY] Switch between BT and wired Headphones added. Seamless PLay on BT or Heapdhones.
 - [MP3][BT][VU-METER] Extended range of colors.
