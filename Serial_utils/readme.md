@@ -50,7 +50,7 @@ Once a connection is established, the script displays the menu:
 ==================================================
 ```
 Select the option matching your requirements.
-# NOTE: If you have a DSP+MP3 License, you can use Option 3 only as the Companion App protocol is not available.
+### NOTE: If you have a DSP+MP3 License, you can use Option 3 only as the Companion App protocol is not available.
 
 
 ### Step 3: Enter License Key (Options 2 & 3 only)
