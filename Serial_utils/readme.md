@@ -52,6 +52,7 @@ Once a connection is established, the script displays the menu:
 Select the option matching your requirements.
 # NOTE: If you have a DSP+MP3 License, you can use Option 3 only as the Companion App protocol is not available.
 
+
 ### Step 3: Enter License Key (Options 2 & 3 only)
 If you are programming a license key, the script will request it. 
 * Note: The key must start with `AUTH:, just like it was received via email or othera means. (e.g., `AUTH:HAMTEST$7*8F8AB278D6C855E0`).
