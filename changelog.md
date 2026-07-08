@@ -1,8 +1,49 @@
 ## Note: The updates are cumulative; just update to the latest. The changelog keeps track also on unreleased versions!
+
+
+# v1.5.9 - Play All Playlist Scope & Navigation Bugfix (2026-07-08)
+## NOTE: This update doesn not require ERASE FLASH and recovers previous user settings
+- [MP3][BUGFIX] Fixed Play All behavior: selecting a track now correctly builds and plays the full active playlist (all tracks or the selected folder), preventing unexpected jumps back to the Default folder after the first song.
+- [MP3][BUGFIX] Improved Shuffle and playlist transition handling, ensuring uninterrupted playback without premature stops or unwanted repeats.
+
+
+# v1.5.8 - Analog Balance, Sequential Safe Reset, UI Prompts & Machine Serial Protocol Fixes (2026-07-06)
+## NOTE: This update doesn not require ERASE FLASH and recovers previous user settings
+- [UI/UX] Improved physical button touch detection consistency across different display units.
+- [UI/UX] Increased touch sensitivity for easier interaction near the bottom of the screen.
+- [UI/UX] Added an interactive calibration tool for the physical buttons, accessible directly from the Device menu and saved permanently.
+- [UI/UX][BUGFIX] Improved calibration reliability, reduced screen flicker, and prevented accidental touches during the calibration process.
+- [UI/UX][BUGFIX] Prevented unintended menu changes after completing or cancelling calibration.
+- [SYSTEM][BUGFIX] Fixed a rare system freeze that could occur in the Device menu.
+- [SYSTEM] Added automatic recovery of invalid calibration values after firmware upgrades.
+- [SERIAL] Added a serial command for emergency button calibration.
+- [AUDIO][CODEC] Added hardware analog left/right audio balance control.
+- [UI/UX] Added the new ES Balance setting to the Device menu.
+- [SERIAL] Added serial commands for both analog and digital balance adjustment.
+- [UI/UX][BUGFIX] Reworked the hardware reset confirmation sequence for improved reliability.
+- [UI/UX][BUGFIX] Added extra protection against accidental actions immediately after a reset.
+- [UI/UX] Updated reset confirmation messages with clearer user guidance.
+- [SERIAL][BUGFIX] Simplified Serial Protocol access while retaining license-based protection.
+- [SERIAL] Added direct query support for Serial Protocol live parameters.
+- [SERIAL][BUGFIX] Fixed balance parameter reporting in memory presets.
+- [SERIAL][BUGFIX] Fixed preset storage persistence to ensure settings are saved correctly.
+
+
+# v1.5.7 - Insert & Return in MP3Player mode & UI Polish (2026-07-06)
+## NOTE: This update doesn not require ERASE FLASH and recovers previous user settings
+- [MP3][BUGFIX] Fixed Insert & Run reliability issues that could prevent queued tracks from starting correctly.
+- [MP3][UI/UX] Improved queued-track display, clearly separating the currently inserted track from the next queued track.
+- [UI/UX][MP3] Improved B-button behavior: it now starts playback directly when the player is stopped and acts as Insert while music is playing.
+- [BUGFIX] Fixed a compilation issue affecting the MP3 playlist component.
+- [DEV/DEBUG] Reduced Bluetooth system messages unless debug logging is explicitly enabled.
+
+
+
 # v1.5.6 - Bug solving (2026-07-05)
 ## NOTE: This update doesn not require ERASE FLASH and recovers previous user settings
 [BUGFIX][BT][MP3] 
 - Stutter/cracks when listen in MP3Player on BT Sink solved.
+
 
 # v1.5.5 - MAJOR UPDATE. BLE in DSP Mode enabled. BT A2DP Stability, New Serial commands, Audio Improvements & Advanced Equalizer (2026-07-05)
 ## NOTE: This update doesn not require ERASE FLASH and recovers previous user settings
