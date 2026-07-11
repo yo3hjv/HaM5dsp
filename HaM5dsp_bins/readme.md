@@ -14,7 +14,7 @@ There are three ways to flash or update the M5DSP firmware:
 
 ---
 
-## 2. In-Application UART OTA (Brick-Safe & Preserves Settings)
+## 2. With Android App (coming soon) UART OTA (Brick-Safe & Preserves Settings)
 
 Introduced in **v1.2.0**, this method allows updating the device over the USB-Serial cable without putting the ESP32 into bootloader mode. The running app receives the firmware block-by-block and writes it to the inactive flash partition.
 
@@ -24,7 +24,7 @@ Introduced in **v1.2.0**, this method allows updating the device over the USB-Se
 
 ### Serial Protocol via USB Cable (APP Mode)
 Connect the Core2 to Android Phone via USB-C cable.
-Select Update Firmware, choose FW ''.ino.bin'' file and press UPLOAD.
+Select Update Firmware, choose FW ''M5DSP_upd_[ver]_.bin'' file and press UPLOAD.
 
 ---
 
@@ -38,10 +38,10 @@ If your device already has the bootloader and partition table flashed (just upda
 1. Connect your M5Stack Core2 to your PC via USB.
 2. Open the Web Serial Flasher in Google Chrome.
 3. Select the baud rate (e.g., `115200` or `921600`) and click **Connect**.
-4. Choose the compiled application binary (e.g., `M5DSP.ino.bin` or `M5DSP.bin` - size is approx. 1.4 MB).
-5. Set the offset address to **`0x10000`** (Hexadecimal).
+4. Choose the compiled application binary (e.g. `M5DSP_upd_[VER].bin` - size is approx. 1.4 MB).
+5. Set the offset address to **`0x10000`** (Hexadecimal). ## SEE THE INSTRUCTIONS BELOW
    > [!CAUTION]
-   > Do **NOT** flash the app binary at `0x0`. Doing so will overwrite the bootloader and crash the device.
+   > Do **NOT** flash the `M5DSP_upd_[VER].bin` binary at `0x0`. Doing so will overwrite the bootloader and crash the device.
 6. Click **Program / Flash**. This will update the application code but leave the NVS partition (which stores user configurations) untouched.
 
 ---
@@ -51,7 +51,7 @@ If you have a brand new M5Stack Core2 or have performed a full chip erase, you n
 
 #### Option 1: Using the Full 16MB Flash Image (easiest)
 Write the complete 16 MB binary dump (exactly `16,777,216` bytes) which contains the bootloader, partition table, empty NVS space, and the app all-in-one.
-* **File**: `M5DSP_Full_16MB.bin`
+* **File**: `M5DSP_Full_[VER.].bin`
 * **Flashing Offset**: **`0x0`**
 * *Note: This will overwrite everything, resetting NVS settings to factory defaults.*
 
@@ -62,6 +62,7 @@ If you compile from source, you will have three separate files in your build dir
 | :--- | :--- | :--- |
 | `bootloader.bin` | **`0x1000`** | System boot code |
 | `partitions.bin` (or `partition-table.bin`) | **`0x8000`** | Partition boundaries |
-| `M5DSP.ino.bin` (or `M5DSP.bin`) | **`0x10000`** | Main Application code |
+| `M5DSP_Full_[VER.].bin` | **`0x10000`** | Main Application code |
 
-Click **Program** to write all three files to the device. Once flashed, future updates can be done by simply writing `M5DSP.ino.bin` at `0x10000`.
+Click **Program** to write all three files to the device. 
+Once flashed, future updates can be done by simply writing `M5DSP_upd_[VER].bin` at `0x10000`.
