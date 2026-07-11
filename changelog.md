@@ -1,6 +1,21 @@
 ## Note: The updates are cumulative; just update to the latest. The changelog keeps track also on unreleased versions!
 
 
+# v1.5.13 - MP3 Buffer Stabilization & BT Dynamic Activation Fix (2026-07-11)
+## NOTE: This update doesn not require ERASE FLASH and recovers previous user settings but a FULL firmware update is recommended
+- [KNOWN_BUG][BT][MP3] Critical crash that could occur when enabling Bluetooth dynamically while no previously paired Bluetooth device was stored. Bluetooth audio services sometimes doesn't start correctly causing system resets. Temporary fix: Do not try to pair with BT while playing mp3 file.
+- [AUDIO][MP3] Improved MP3 playback stability when playing files containing large embedded metadata blocks (such as ID3v2 tags, padding, or APE tags). This significantly reduces the likelihood of audible pauses or dropouts during playback.
+- [AUDIO][MP3][SYSTEM] Added a safer startup fallback mechanism. If the system cannot allocate the larger playback buffer required for optimal MP3 operation, it automatically falls back to a safe configuration (in SRAM from PSRAM) instead of risking instability or startup failures.
+- [UI/UX] Added a simplified startup splash screen for MP3-only firmware builds.
+- [LED][BUGFIX] Fixed the LED VU meter not operating correctly during MP3 playback.
+- [AUDIO][MP3] Expanded the MP3 digital makeup gain adjustment range, allowing both signal amplification and attenuation for more flexible output level control.
+- [AUDIO][MP3] Added an independent output limiter to the MP3 audio processing chain, allowing peak levels to be restricted to a user-defined threshold.
+- [UI/UX] Integrated the new Limiter setting into the MP3 settings menu.
+- [UI/UX][MP3] Renamed DRC parameters for improved clarity: "DRC Attack" and "DRC Release".
+- [SERIAL] Telemetry streaming is now independent of the Signal Level LED setting. Telemetry can be enabled or disabled explicitly through dedicated serial commands.
+- [SERIAL][BUGFIX] Fixed a critical issue in v1.5.8 where DSP preset parameters modified through the serial interface appeared to be saved successfully but were not actually available for use afterwards. Presets edited through the serial protocol are now stored, activated, and recalled correctly.
+
+
 # v1.5.9 - Play All Playlist Scope & Navigation Bugfix (2026-07-08)
 ## NOTE: This update doesn not require ERASE FLASH and recovers previous user settings
 - [MP3][BUGFIX] Fixed Play All behavior: selecting a track now correctly builds and plays the full active playlist (all tracks or the selected folder), preventing unexpected jumps back to the Default folder after the first song.
