@@ -1,0 +1,329 @@
+M5DSP – Serial Commands Reference
+  Version: M5DSP v1.6.3   |   Last update: 2026-07-18
+  M5Stack Core2 + ModuleAudio (ES8388) DSP Pipeline
+  Baud rate: 115200
+
+On the HaM5dsp device in Device Setup set 'SerProt' to "Human" or send via Serial the exact command 'WKM5' to activate it.
+================================================================================
+
+HUMAN SERIAL PROTOCOL COMMAND LIST (Alphabetical Quick Reference)
+
+--------------------------------------------------------------------------------
+Command          Min/Max Values      Brief Description
+--------------------------------------------------------------------------------
+abccalibration    -                  Triggers the interactive button calibration procedure. ACTION
+analogvolume_     0 - 100            Hardware analog volume (DAC). ARG
+automp3           on/off             Automatic MP3 startup at boot. ON/OFF
+balance         -100 - 100           DSP stereo balance. ARG
+esbal           -100 - 100           Hardware analog balance (ES8388). ARG
+esvol           0 - 100              Hardware analog volume (ES8388). ARG
+batv            -                    Battery telemetry. ACTION
+bypassoff       -                    Disables DSP bypass. ACTION
+bypasson        -                    Enables full bypass. ACTION
+cw              -                    Activates live CW mode. ACTION
+cw2d            1 - 25               Sets CW 2D delay. ARG
+cw2doff         -                    Disables CW 2D. ACTION
+cw2don          -                    Enables CW 2D. ACTION
+cw3d            1 - 10               Sets CW 3D depth. ARG
+cw3doff         -                    Disables CW 3D. ACTION
+cw3don          -                    Enables CW 3D. ACTION
+cwagcoff        -                    Disables CW AGC. ACTION
+cwagcon         -                    Enables CW AGC. ACTION
+cwbw            25 - 1000            Sets CW BPF bandwidth. ARG
+cwcenter        400 - 900            Sets CW BPF center frequency. ARG
+cwdelta         1 - 100              Sets CW detection hysteresis margin (%). ARG
+cwmaxwpm        12 - 60              Sets maximum CW speed. ARG
+cwminwpm        5 - 20               Sets minimum CW speed. ARG
+cwnoisefloor    -                    Displays CW noise floor level. ACTION
+cwsamplesg1     64 - 512             Sets Goertzel Samples (CW G Samp). ARG
+cwthr           1 - 100              Sets CW spectral detection threshold (%). ARG
+displayspace    0 / 1 / 2            Changes Display Info Zone page. ARG
+dump            -                    Displays DSP and NVS status. ACTION
+dumpall         -                    Runs all dumps. ACTION
+dumpaxp         -                    Dumps AXP192 registers. ACTION
+dumpes          -                    Dumps ES8388 registers. ACTION
+dumpnvs         -                    Displays NVS status (physical vs RAM). ACTION
+fftfloor        0.0 - 10.0           Sets FFT floor level. ARG
+fftrange        0.1 - 10.0           Sets FFT dynamic range. ARG
+fftspanv        500 - 8000           Sets VOICE FFT span. ARG
+fwversion       -                    Displays firmware version. ACTION
+hapton / haptoff    -                Global haptic feedback ON / OFF. ACTION
+haptlong        -                    Triggers long vibration. ACTION
+haptlongdur     10 - 2000            Sets long vibration duration. ARG
+haptshort       -                    Triggers short vibration. ACTION
+haptshortdur    10 - 1000            Sets short vibration duration. ARG
+help            -                    Displays command list. ACTION
+hicut           1200 - 10500         Sets VOICE Hi-cut filter. ARG
+headphones omtp/ctia    -            Sets headphone standard (OMTP=Old, CTIA=New). ARG
+ledbarbright      1, 2, 4..96        Sets LED bargraph brightness. ARG
+hpinfo          -                    Displays headphone jack status. ACTION
+igain           0 - 8                Sets ADC gain. ARG
+inatt           0 - 100              Sets DSP input attenuation. ARG
+loadmcX         -                    Loads CW preset X. ARG
+loadmvX         -                    Loads VOICE preset X. ARG
+lowcut          25 - 800             Sets VOICE Low-cut filter. ARG
+mallsd          -                    Returns total folders and tracks on the SD card. ACTION
+mcurtrack       -                    Displays current track index and filename. ACTION
+mcXcw2d         0 / 1 - 25           Sets CW preset X 2D delay. ARG
+mcXcw3d         0 / 1 - 10           Sets CW preset X 3D depth. ARG
+mcXbal          -100 - 100           Sets CW preset X digital balance. ARG
+mcXbw           25 - 1000            Sets CW preset X BPF bandwidth. ARG
+mcXcf           400 - 900            Sets CW preset X BPF center frequency. ARG
+mcXslope        0 - 3                Sets CW preset X filter slope. ARG
+mode            0, 1                 Sets VOICE/CW mode. ARG
+mp3vumeter        0 - 3              MP3 VU meter mode (0=OFF, 1=Simple, 2=Rainbow, 3=Dot). ARG
+mpbal          -100 / 100            MP3 module stereo balance. ARG
+mpvol          0 - 100               MP3 module DAC volume. ARG
+mute/unmute     -                    Mute/unmute audio. ON/OFF
+mvXhicut        1200 - 10500         Sets VOICE preset X Hi-cut. ARG
+mvXlowcut       25 - 800             Sets VOICE preset X Low-cut. ARG
+mvXbal          -100 - 100           Sets VOICE preset X digital balance. ARG
+mvXslope        0 - 3                Sets VOICE preset X filter slope. ARG
+mvXvas          0 / 1                Voice Activity Squelch for VOICE preset X. ON/OFF
+next            -                    Advances to the next track in the active playlist. ACTION
+nron/nroff      -                    Noise Reduction live ON/OFF. ON/OFF
+overload/ovl    -                    Displays live overload status. ACTION
+pause           -                    Pauses/resumes playback (Toggle). ACTION
+perif5v         out/in               5V peripheral power. ARG
+play            -                    Starts or resumes playback of the current track. ACTION
+prev            -                    Goes to the previous track in the active playlist. ACTION
+repeat          0, 1, 2              Sets repeat mode (0=OFF, 1=Track, 2=All). ARG
+shuffle         0, 1                 Enables (1) or disables (0) shuffle playback. ON/OFF
+siglevled       on/off               Signal Level LED indicators enable/disable. ON/OFF
+stop            -                    Stops playback completely and resets position. ACTION
+table           -                    Displays the number of tracks in the currently loaded playlist. ACTION
+savetomem       1 - 3                Saves the current live preset. ARG
+scrbr           0 - 100              Sets screen brightness. ARG
+setdate         dd.mm.yy             Sets RTC date. ARG
+settime         hh:mm:ss             Sets RTC time. ARG
+slope           0, 1, 2, 3           Sets live voice filter slope. ARG
+table                              Lists the filename table of tracks on the SD card.
+theme           0 / 1 / 3            Changes theme. ARG
+time            -                    Displays local and UTC date/time. ACTION
+timezone        -12 - 14             Sets UTC offset. ARG
+tonetest        off/l/r/both         Enables 1kHz test tone. ARG
+usercw          -                    Returns to manual live CW control. ACTION
+uservoice       -                    Returns to manual live VOICE control. ACTION
+vashang         50 - 2000            Sets live VAS hold time. ARG
+vasoff          -                    Disables live VAS. ACTION
+vason           -                    Enables live VAS. ACTION
+vasref          1 - 3                Sets noise reference frequency (Hz). ARG
+vaswin          0.001 - 0.5          Sets live VAS threshold. ARG
+voice           -                    Activates live VOICE mode. ACTION
+vol/gain        0 - 100              Sets unified audio volume. ARG
+
+
+
+--------------------------------------------------------------------------------
+DETAILED DESCRIPTION BY FUNCTIONALITY (HUMAN SERIAL PROTOCOL)
+--------------------------------------------------------------------------------
+
+
+────────────────────────────────────────────────────────────────────────────────
+  OPERATING MODE & LIVE STATUS (User mode)
+────────────────────────────────────────────────────────────────────────────────
+  mode 0          Sets VOICE mode (speech filtering: HPF + LPF).
+  mode 1          Sets CW mode (band-pass filter centered around the CW frequency).
+  voice           Direct alias: activates VOICE mode (User live).
+  cw              Direct alias: activates CW mode (User live).
+  uservoice       Returns to manual live VOICE control (User mode), leaving the active preset.
+  usercw          Returns to manual live CW control (User mode), leaving the active preset.
+  When changing modes, live settings are automatically saved/loaded from NVS.
+────────────────────────────────────────────────────────────────────────────────
+  VOICE FILTER (mode 0, User live)
+────────────────────────────────────────────────────────────────────────────────
+  lowcut N        Live High-pass (Low-cut) frequency in Hz. Range: 25 – 800 Hz.
+  hicut N         Live Low-pass (Hi-cut) frequency in Hz. Range: 1200 – 10500 Hz.
+  slope N         Live filter slope: 0=Soft, 1=Medium (24dB), 2=Steep, 3=Bypass.
+────────────────────────────────────────────────────────────────────────────────
+  CW FILTER & SPATIAL (mode 1, User live)
+────────────────────────────────────────────────────────────────────────────────
+  cwcenter N      Live BPF center frequency in Hz. Range: 400 – 900 Hz.
+  cwbw N          Live BPF bandwidth in Hz. Range: 25 – 1000 Hz.
+  cw2don          Enables 2D spatial processing (Spatial Delay).
+  cw2doff         Disables 2D spatial processing.
+  cw2d N          Sets live 2D delay time in ms. Range: 1 – 25 ms.
+  cw3don          Enables 3D spatial processing (Spectral Depth).
+  cw3doff         Disables 3D spatial processing.
+  cw3d N          Sets the live spectral 3D coefficient. Range: 1 – 10 (Alpha factor).
+  cwagcon         Enables the local AGC dedicated to the CW decoder.
+  cwagcoff        Disables the local AGC dedicated to the CW decoder.
+  cwthr [N]       Sets/displays the CW spectral detection threshold percentage.
+                  Range: 1 – 100 (Default: 32).
+                  *Effect:* Determines decoding sensitivity. Low values (10-20) increase
+                  sensitivity for weak signals but may generate spurious characters from
+                  noise. Higher values (50-70) decode only strong/clean signals,
+                  eliminating errors caused by background noise.
+  cwdelta [N]     Sets/displays the hysteresis margin (buffer zone below threshold)
+                  for CW detection. Range: 1 – 100 (Default: 32).
+                  *Physical Effect & Adjustment Guide:*
+                  - Optimal value (25-40): Allows smooth decoding. Keeps the tone
+                    "active" even if the signal rapidly fluctuates due to fading
+                    (QSB) during a Dah, while promptly returning to "inactive"
+                    during spaces between characters.
+                  - Value too low (1-15): The system becomes unstable from small
+                    signal fluctuations, fragmenting or "breaking" a continuous Dah
+                    into multiple short, undecodable Dits.
+                  - Value too high (60-90): The system remains stuck ("latched")
+                    in the active state even after the tone has stopped, merging
+                    letters and spacing into one continuous long tone.
+────────────────────────────────────────────────────────────────────────────────
+  MP3 PLAYER CONTROLS & EFFECTS (v0.23.0+)
+────────────────────────────────────────────────────────────────────────────────
+  mpvol N         DAC output volume in MP3 mode (0–100%).
+  mpbal N         Stereo balance in MP3 mode (-100 = Left only, 100 = Right only).
+  mp3drc on/off   Enables/Disables Dynamic Range Compressor (DRC) / Limiter.
+  mp3thr N        DRC compression threshold in dB. Range: -40.0 … 0.0 dB.
+  mp3gain N       Make-up Gain in dB.              Range: -12.0 … 12.0 dB.
+  mppregain N     Pre-Gain applied to raw MP3 input in dB.      Range: -24 … +18 dB.
+  mplimiter N     Limiter level in dBFS.           Range: -6 … -1 dBFS or off.
+  mp3att N        Compression Attack time in ms.   Range: 1.0 – 100.0 ms.
+  mp3rel N        Compression Release time in ms.  Range: 10.0 – 1000.0 ms.
+────────────────────────────────────────────────────────────────────────────────
+  MP3 PLAYER TRANSPORT CONTROLS & INFO (v0.26.1+)
+────────────────────────────────────────────────────────────────────────────────
+  play            Starts or resumes playback of the current track.
+  stop            Stops playback completely (resets position to second 0).
+  pause           Pauses/resumes playback (Toggle).
+  next            Advances to the next track in the active playlist.
+  prev            Goes to the previous track in the active playlist.
+  repeat N        Sets repeat mode:     0=OFF (no repeat), 1=Track (current track), 2=All (all tracks).
+  shuffle N       Enables (1) or disables (0) random track playback.
+  mallsd          Displays the total number of folders and tracks on the SD card.
+  table           Displays the number of tracks in the currently loaded playlist.
+  mcurtrack       Displays the current track index and active filename.
+────────────────────────────────────────────────────────────────────────────────
+  VOLUME, GAIN & BALANCE (General audio)
+────────────────────────────────────────────────────────────────────────────────
+  vol N           Unified general audio volume (DSP and MP3).  Range: 0 – 100 %.
+  balance N       DSP stereo balance (active preset).  Range: -100 (left only) … 100 (right only).
+  esvol N         Hardware analog volume (ES8388).     Range: 0 - 100 %.
+  esbal N         Hardware analog balance (ES8388).    Range: -100 - 100.
+  igain N         Analog gain (PGA) at ADC input (ES8388 codec).  Range: 0 – 8.
+  inatt N         DSP input signal digital attenuation.      Range: 0 – 100 %.
+  mute            Disables audio output (Mute).
+  unmute          Re-enables audio output (Unmute).
+────────────────────────────────────────────────────────────────────────────────
+  NOISE REDUCTION (Wiener-DD, User live)
+────────────────────────────────────────────────────────────────────────────────
+  nron/nroff      Enables/Disables live Noise Reduction     (active only in VOICE mode).
+  nrreset         Re-captures the background noise profile
+                  (useful after QSY or band changes). To avoid confusing the desired speech signal with background noise, the Noise Reduction algorithm estimates the noise using a fairly slow time constant (slow adaptation over time).If it adapted too quickly, the algorithm would begin to mistake longer syllables or short pauses in speech for noise and attenuate them, resulting in speech distortion (the characteristic "watery" or "underwater" sound effect). This command resets the automatically determined noise floor level, allowing the algorithm to adapt to a dramatic change in noise conditions (such as changing frequency bands).
+────────────────────────────────────────────────────────────────────────────────
+  FFT / SPECTROGRAM
+────────────────────────────────────────────────────────────────────────────────
+  fftfloor N      Spectrum floor level.     Recommended value between 4-5.    	  Range: 0.0 - 10.0.
+  fftrange N      Spectrum dynamic range.   Recommended value between 3.3 - 3.6   Range: 0.1 - 10.0.
+  fftspanv N      FFT frequency span in Hz for VOICE mode.  Good with 5000    Range: 500 - 8000 Hz.
+────────────────────────────────────────────────────────────────────────────────
+  VAS – Voice Activity Squelch (User live)
+────────────────────────────────────────────────────────────────────────────────
+  vason/vasoff    Enables/Disables live Voice Activity Squelch.  
+  vaswin N        Live squelch detection threshold.   Recommended value 0.030. Tune in 0.002 steps      Range: 0.001 – 0.5.
+  vashang N       Live squelch hold time in ms.   Recommended value 700         Range: 50 – 2000 ms.
+  vasref N        Noise reference frequency.      Recommended value  2          Values: 1, 2, 3 (Hz).
+────────────────────────────────────────────────────────────────────────────────
+  SYSTEM / THEMES / DIAGNOSTICS / POWER (v0.27.0)
+────────────────────────────────────────────────────────────────────────────────
+  theme N         Changes the interface color theme.
+                  Values:        N = 0 (Dark/Default), 1 (Light), 2 (Amber) 3 (Military) 4 (Navy)
+
+  displayspace N  Switches the screen/page displayed in the Display Info Zone:
+                  0 (Dashboard/Filters), 1 (FFT), 2 (CW Decoder).
+                  * When executed without a parameter, returns the active page.
+                  * Note: Context-validated (Page 2 is only available in CW mode).
+
+  savetomem N     Saves the active live state (VOICE or CW) into persistent
+                  memory Slot N (1-3). [NVS]
+                  * Note: Automatically determines the current context
+                    (VOICE/CW) and saves it under the mode-specific key.
+
+  scrbr N         Sets LCD screen brightness (0 - 100 %).
+
+  hapton / haptoff Enables/Disables global haptic feedback.
+  haptshort       Triggers a short live vibration.
+  haptlong        Triggers a long live vibration.
+  haptshortdur N  Sets short vibration duration in ms (10 - 1000). The value is stored persistently in NVS.
+
+  haptlongdur N   Sets long vibration duration in ms (10 - 2000).  The value is stored persistently in NVS.
+  dump            Complete DSP and NVS parameter status for user settings backup as text file.
+  dumpaxp         Detailed hexadecimal dump of AXP192 PMIC registers.
+  dumpes          Detailed hexadecimal dump of ES8388 audio codec registers.
+  dumpnvs         Displays discrepancies (synchronization status)   between RAM and Flash (NVS).
+
+  ledbarbright N  Sets bargraph LED brightness     (1, 2, 4, 8, 12, 16, 24, 32, 48, 64, 96).
+  dumpall         Executes all dumps above sequentially           (full diagnostics).
+  headphones omtp Sets hardware headphone standard to OMTP (old).
+  headphones ctia Sets hardware headphone standard to CTIA (new).
+  hpinfo          Headphone jack diagnostics (OMTP/CTIA standards).
+  fwversion (or fwver)      Displays the current firmware version (FW).
+  tonetest        Generates a 1kHz tone for calibration. Only on DSP Mode.
+  time            Displays the current UTC date/time from RTC.
+  batv            Displays battery telemetry in an explicit human-friendly format.
+                  Response:
+                  "Battery: [Level]% | Voltage: [Voltage]v |
+                  Charging: [YES/NO] | Nominal: [N] mAh |
+                  Measured: [M] mAh"
+                  * The "Measured" capacity remains 0.0 mAh until
+                    at least one complete discharge cycle has been
+                    completed and saved.
+
+  automp3 [on/off]      Sets/displays automatic MP3 startup at boot.
+  mp3vumeter [0-3]   Sets the MP3 VU-meter mode     (0=OFF, 1=Simple, 2=Rainbow, 3=Dot).
+  perif5v [out/in]   Sets/displays 5V peripheral power (OUT/IN).
+  siglevled [on/off] Sets/displays Signal Level LED indicators in DSP mode to help the user set the correct input levels
+  overload (or ovl)  Displays the current input overload  (clipping) status (YES/NO).
+  abccalibration  Triggers the interactive calibration procedure for the physical BtnA, BtnB and BtnC buttons.
+                  * Note: Useful as a recovery/emergency procedure
+                    if touch coordinates become severely corrupted.
+
+────────────────────────────────────────────────────────────────────────────────
+  DIRECT PRESET EDITING & LOADING (v0.28.4)
+────────────────────────────────────────────────────────────────────────────────
+  M5DSP supports direct querying, editing and activation of parameters
+  stored in preset memory slots for both operating modes (VOICE and CW),
+  without requiring the slot to be loaded into the DSP beforehand.
+
+  Slot Mapping X:
+  * X = 1..3     -> The 3 saved memory presets (MV1-3 / MC1-3).
+  * NOTE: USER working memory (Slot 0) is no longer loaded generically;
+          use the dedicated 'uservoice' and 'usercw' commands instead.
+
+  1. Direct Preset Activation (Load & Apply):
+     - For VOICE:
+       Command:    loadmvX (where X: 0-3, where 0 = Live User, 1-3 = Presets)
+       Example:    "loadmv1" -> Loads and activates VOICE preset 1.
+       Response:   "Loaded and activated VOICE Slot [X] (MV[X])"
+     - For CW:
+       Command:    loadmcX (where X: 0-3, where 0 = Live User, 1-3 = Presets)
+       Example:    "loadmc1" -> Loads and activates CW preset 1.
+       Response:   "Loaded and activated CW Slot [X] (MC[X])"
+
+  2. VOICE Parameters (MVX Presets, where X: 1-3):
+     mvXlowcut     Lowcut HPF filter in preset X (Hz, range: 25 - 800)
+     mvXhicut      Hicut LPF filter in preset X (Hz, range: 1200 - 10500)
+     mvXslope      Filter slope in preset X (range: 0 - 3)
+     mvXbal        Digital balance in preset X (-100 to 100)
+     mvXvas        Voice Activity Squelch in preset X (range: 0=OFF, 1=ON)
+
+  3. CW Parameters (MCX Presets, where X: 1-3):
+     mcXcf         BPF center frequency in preset X (Hz, range: 400 - 900)
+     mcXbw         BPF bandwidth in preset X (Hz, range: 25 - 1000)
+     mcXslope      Filter slope in preset X (range: 0 - 3)
+     mcXbal        Digital balance in preset X (-100 to 100)
+     mcXcw2d       Spatial 2D Delay in preset X  (range: 0=OFF, 1 - 25 ms delay)
+     mcXcw3d       Spatial 3D depth in preset X  (range: 0=OFF, 1 - 10 alpha factor)
+
+  4. Terminal Response Format (Friendly Human Format):
+     - On Query (without sending a value):
+       Example:    "mv1lowcut" -> Responds: "MV1-Lowcut: 300 Hz"
+       Example:    "mc1cw2d"   -> Responds: "MC1-2D Delay: 15 ms"
+
+     - On Edit (value provided):
+       Example:    "mv1lowcut 300" -> Responds: "MV1-Lowcut: 300 Hz Set"
+       Example:    "mc1cw2d 0"     -> Responds: "MC1-2D Delay: OFF Set"
+       Example:    "mc1cw3d 5"     -> Responds: "MC1-3D Spatial: Alpha 5 Set"
+
+     * Note: If the edited slot is currently the active slot on the device,
+       the new setting is automatically applied live
+       (real-time DSP synchronization & screen redraw).
