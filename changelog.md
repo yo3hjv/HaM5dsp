@@ -1,4 +1,22 @@
 ## Note: The updates are cumulative; just update to the latest. The changelog keeps track also on unreleased versions!
+______________________________________________________________
+
+# v1.6.4 - CW Decoder Refactor, New Features, Bug Fixes & UI Polish (2026-07-18)
+## NOTE: This update doesn not require ERASE FLASH and recovers previous user settings but a FULL firmware update is recommended
+- [UI/UX][BUGFIX] Fixed incorrect CW/DIG display showing MIX:ST instead of MIX:MO when neither 2D nor 3D modes are active.
+- [UI/UX][BUGFIX][SYSTEM] Fixed the BACK TO DEFAULTS confirmation page not behaving as expected.
+- [CW][BUGFIX] Fixed DevSetup items.
+- [CW][FEATURE][UI/UX] Implemented MultiTune mode as a user-selectable option. The decoder can now decode either only at the filter passband center frequency or anywhere within the filter passband. Automatically disabled when BW > 400 Hz.
+- [CW][UI/UX][FEATURE] Added the "CW Decode: Center / In Band" menu option to the CwSet tab in DevSet, with UP/DOWN toggle control and NVS persistence.
+- [CW][SYSTEM][FEATURE] Implemented retroactive prosign recognition.
+- [CW][UI/UX][FEATURE] Added active decoding mode display ("CENTER" / "IN BAND") to the CW Decoder InfoZone page.
+- [CW][UI/UX][FEATURE] Added CW signal tuning indicator for decoder center-frequency alignment.
+- [CW][SERIAL] Updated serial commands.
+- [CW][SLIDER] Remapped the CW Decoder slider to control the CW decoder detection threshold. Label: "Thresh", range: 0-100.
+- [CW][BUGFIX] Fixed settings save functionality.
+- [CW][SYSTEM] Added Bayesian adaptation logic for CW symbol speed variations.
+- [CW][REFACTOR] Completely rewrote the CW decoding pipeline using adaptive logic based on multiple sampling and dit/dah cross-estimation.
+- [CW][DSP] Implemented adaptive thresholding with Signal Peak tracking.
 
 
 # v1.5.13 - MP3 Buffer Stabilization & BT Dynamic Activation Fix (2026-07-11)
