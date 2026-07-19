@@ -1,5 +1,9 @@
 ## Note: The updates are cumulative; just update to the latest. The changelog keeps track also on unreleased versions!
 ______________________________________________________________
+# v1.6.5 DMPT serial command for extended diagnostics log (2026-07-19)
+## NOTE: This update doesn not require ERASE FLASH and recovers previous user settings 
+- [FEATURE][SYSTEM][SERIAL] Extended diagnostic added for bug reporting.
+
 
 # v1.6.4 - CW Decoder Refactor, New Features, Bug Fixes & UI Polish (2026-07-18)
 ## NOTE: This update doesn not require ERASE FLASH and recovers previous user settings but a FULL firmware update is recommended
